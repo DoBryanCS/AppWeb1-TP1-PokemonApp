@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">&nbsp;</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">TP1</a>
+                <a id="favorites" href="favorites.html" class="navbar-item is-hidden">Favoris</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a id="afficherConnexion" href="connexion.html" class="button is-light">Connexion</a>
+                        <a id="afficherDeconnexion" class="button is-light is-danger is-hidden">Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="columns">
+            <div class="field is-horizontal" style="padding-left:20px">
+                <div class="field-label is-normal">
+                    <label class="label" for="species">Species</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control" style="min-width: 200px">
+                            <div class="select is-fullwidth">
+                                <select id="species">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal" style="padding-left:20px">
+                <div class="field-label is-normal">
+                    <label class="label" for="poketypes">Poketypes</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control" style="min-width: 200px">
+                            <div class="select is-fullwidth">
+                                <select id="poketypes">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal" style="padding-left:20px">
+                <div class="field-label is-normal">
+                    <label class="label" for="habitats">Habitat</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control" style="min-width: 200px">
+                            <div class="select is-fullwidth">
+                                <select id="habitats">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <!-- Left empty for spacing -->
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <button id="btnFiltrer" class="button is-primary">
+                                Filtrer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pokemons" class="row columns is-multiline is-mobile">
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>e1234567</p>
+        </div>
+    </div>
+</footer>
+<script src="index.js" type="module"></script>
+</body>
+</html>

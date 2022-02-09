@@ -1,0 +1,19 @@
+{
+    "name": "tp1",
+    "version": "1.0.0",
+    "description": "",
+    "author": "glachance@cmaisonneuve.qc.ca",
+    "scripts": {
+        "start": "npx ws",
+        "lint": "npx eslint *.js",
+        "fix": "npx eslint *.js --fix"
+    },
+    "dependencies": {
+        "local-web-server": "^5.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.6.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.4"
+    }
+}
