@@ -2,13 +2,14 @@
     "name": "tp1",
     "version": "1.0.0",
     "description": "",
-    "author": "glachance@cmaisonneuve.qc.ca",
+    "author": "e2072765",
     "scripts": {
         "start": "npx ws",
         "lint": "npx eslint *.js",
         "fix": "npx eslint *.js --fix"
     },
     "dependencies": {
+        "express": "^4.17.2",
         "local-web-server": "^5.1.1"
     },
     "devDependencies": {
