@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">&nbsp;</a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">TP1</a>
+            </div>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="content">
+            <div class="field">
+                <label for="email" class="label">Email</label>
+                <div class="control has-icons-left">
+                    <input id="email" type="email" placeholder="e1234567@site.com" class="input"
+                           autocomplete="email" required/>
+                    <span class="icon is-small is-left"><i class="fa fa-envelope"></i></span>
+                </div>
+            </div>
+            <div class="field">
+                <label for="password" class="label">Password</label>
+                <div class="control has-icons-left">
+                    <input id="password" type="password" placeholder="*******" class="input" autocomplete="password"
+                           required>
+                    <span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <button id="connexion" class="button is-success">Connexion</button>
+                    <button id="annuler" class="button is-danger">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>e1234567</p>
+        </div>
+    </div>
+</footer>
+<script src="connexion.js" type="module"></script>
+</body>
+</html>
