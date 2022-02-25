@@ -14,13 +14,16 @@ function genererPokemons(data) {
                 poke += `, ${data[i].poketypes[index].name}`;
             }
         }
-        a += `<div class="column is-one-quarter-desktop is one-third-tablet is-full-mobile">
+        a += `<div class="column is-3-desktop is-4-tablet is-full-mobile">
                 <div class="card large" style="background-color:${data[i].color}">
                     <div class="card-image" >
+                    <a href="./details.html?pokemonId=${data[i].pokemonId}">
+
                         <figure class="image is-square" >
                             <img src="${data[i].imgURL}"
                                 alt="${data[i].name}">
                         </figure>
+                    </a>
                     </div>
                         <div class="card-content">
                         <div class="media">
@@ -94,7 +97,13 @@ async function FiltrerPokemons() {
       data = data.filter((a) => a.habitat.name === habitats);
     }
     if (poketypes !== '') {
-      data = data.filter((a) => a.poke[index] === poketypes);
+       data = data.filter((a) => {
+           for (let index = 0; index < a.poketypes.length; index++) {
+               if (a.poketypes[index].name === poketypes) {
+                   return a.poketypes[index].name === poketypes
+               }
+           }
+       })
     }
     if (species !== '') {
       data = data.filter((a) => a.species.name === species);
@@ -118,3 +127,22 @@ async function ObtenirPokemons() {
     }
   }
   ObtenirPokemons();
+
+  function verif() {
+    if (sessionStorage.getItem("a") != null) {
+        document.getElementById("afficherConnexion").setAttribute("class", "button is-light is-hidden");
+        document.getElementById("afficherDeconnexion").setAttribute("class", "button is-light is-danger");
+        document.getElementById("favorites").setAttribute("class", "navbar-item");
+    } else {
+        document.getElementById("afficherConnexion").setAttribute("class", "button is-light");
+        document.getElementById("afficherDeconnexion").setAttribute("class", "button is-light is-danger is-hidden");
+    }
+}
+
+
+document.getElementById('afficherDeconnexion').addEventListener('click', () => {
+    sessionStorage.clear();
+    window.location.href = './index.html'
+});
+
+verif();
